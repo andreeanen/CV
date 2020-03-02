@@ -1,3 +1,172 @@
-﻿*{
-    box-sizing:border-box;
+﻿* {
+    box-sizing: border-box;
+    font-family: Calibri;
+    font-size: 1rem;
+    color: #00171C;
+    background-color: #E7EBEC;
+}
+
+.resume {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 1fr 4fr 3fr 1.5fr;
+    grid-template-areas: 
+        "photo name name" 
+        "contact about about" 
+        "skills work work" 
+        "projects education education" 
+        "languages hobbies hobbies";
+}
+
+#my-picture {
+    height: 300px;
+    width: 300px;
+}
+
+
+.photo, .name, .contact, .skills, .education, .work, .projects, .hobbies, .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.hobbies-list {
+    display: flex;
+}
+
+.text {
+    text-align: justify;
+    margin: 25px;
+    font-size:1.25rem;
+}
+
+.contact, .skills, .work, .education, .projects, .hobbies, .languages, .about {
+    display: block;
+}
+
+h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #041F24;
+}
+
+h3, .icon {
+    margin: 20px;
+}
+
+.work-position, .work-location, .work-period, .skills-category, .education-program, .education-location, .education-period {
+    list-style-type: none;
+    margin-left: -20px;
+    text-transform: uppercase;
+}
+
+
+.work-position, .skills-category, .education-program {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.work-location, .education-location {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.work-period, .education-period {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.photo {
+    grid-area: photo;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+
+.name {
+    grid-area: name;
+}
+
+h1, h2 {
+    font-family: 'Raleway';
+}
+
+
+.about {
+    grid-area: about;
+}
+
+.work {
+    grid-area: work;
+}
+
+.education {
+    grid-area: education;
+}
+
+.hobbies {
+    grid-area: hobbies;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.languages {
+    grid-area: languages;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.icon {
+    width: 76px;
+    height: 76px;
+    padding: 5px;
+}
+
+
+.language-container {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin:10px auto;
+}
+
+.level {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #8B9EA1;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.english, .swedish{
+    width:100%;
+}
+
+.french, .spanish{
+    width:70%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .resume {
+        /*grid-template-columns: 1fr;*/
+        grid-template-areas: "photo" "name" "contact" "about" "skills" "work" "projects" "education" "languages" "hobbies";
+    }
 }
