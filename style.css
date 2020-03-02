@@ -167,8 +167,7 @@ h1, h2 {
 @media only screen and (max-width: 600px) {
     .resume {
         display:flex;
-        /*grid-auto-columns:1fr;*/
-        /*grid-template-areas: 
+        grid-template-areas: 
              "photo" 
              "name" 
              "contact" 
@@ -178,9 +177,12 @@ h1, h2 {
              "projects" 
              "education" 
              "languages" 
-             "hobbies"
-             "hobbies";*/
-        flex-direction: column;
+             "hobbies";
+       flex-direction: column;
+    }
+
+    .hobbies{
+        order:10;
     }
 
     .hobbies-list{
