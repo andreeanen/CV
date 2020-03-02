@@ -167,18 +167,7 @@ h1, h2 {
 @media only screen and (max-width: 600px) {
     .resume {
         display:flex;
-        grid-template-areas: 
-             "photo" 
-             "name" 
-             "contact" 
-             "about" 
-             "skills" 
-             "work" 
-             "projects" 
-             "education" 
-             "languages" 
-             "hobbies";
-       flex-direction: column;
+        flex-direction: column;
     }
 
     .hobbies{
