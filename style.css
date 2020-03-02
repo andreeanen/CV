@@ -8,7 +8,7 @@
 
 .resume {
     width: 100%;
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 300px 1fr 4fr 3fr 1.5fr;
     grid-template-areas: 
@@ -113,10 +113,6 @@ h1, h2 {
     grid-area: education;
 }
 
-.hobbies {
-    grid-area: hobbies;
-}
-
 .skills {
     grid-area: skills;
 }
@@ -132,6 +128,9 @@ h1, h2 {
 .contact {
     grid-area: contact;
 }
+.hobbies {
+    grid-area: hobbies;
+}
 
 .icon {
     width: 76px;
@@ -145,6 +144,7 @@ h1, h2 {
     background-color: #ddd;
     border-radius: 10px;
     margin:10px auto;
+    display:flex;
 }
 
 .level {
@@ -166,7 +166,34 @@ h1, h2 {
 
 @media only screen and (max-width: 600px) {
     .resume {
-        /*grid-template-columns: 1fr;*/
-        grid-template-areas: "photo" "name" "contact" "about" "skills" "work" "projects" "education" "languages" "hobbies";
+        display:flex;
+        /*grid-auto-columns:1fr;*/
+        /*grid-template-areas: 
+             "photo" 
+             "name" 
+             "contact" 
+             "about" 
+             "skills" 
+             "work" 
+             "projects" 
+             "education" 
+             "languages" 
+             "hobbies"
+             "hobbies";*/
+        flex-direction: column;
     }
+
+    .hobbies-list{
+        display:flex;
+        flex-direction: column;
+    }
+
+    h1, h2{
+        font-size:2rem;
+    }
+
+    h3{
+        font-size:1.5rem;
+    }
+
 }
